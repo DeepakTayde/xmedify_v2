@@ -1,12 +1,16 @@
+import { CssBaseline } from '@mui/material';
+import React from 'react'
+import { Outlet } from 'react-router-dom';
 
-import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>XModify_V2</h1>
-      <h2>Implemented File structure</h2>
-    </div>
+    <React.Fragment >
+      <CssBaseline/>
+      <Outlet/>
+    </React.Fragment>
+
   );
 }
 
