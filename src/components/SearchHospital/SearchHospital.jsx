@@ -63,8 +63,10 @@ const SearchHospital = () => {
       sx={{
         display: "flex",
         gap: 4,
-        justifyContent: "space-between",
+        justifyContent: "center",
         flexDirection: { xs: "column", md: "row" },
+        textAlign:"start",
+        alignItems:"flex-end"
       }}
     >
       <Select
@@ -79,7 +81,8 @@ const SearchHospital = () => {
           </InputAdornment>
         }
         required
-        sx={{ width: "100%", minWidth: 200 }}
+        sx={{ width: "100%", minWidth: "200px"  }}
+
       >
         <MenuItem  value="" disabled sx={{justifyContent:'flex-start'}}>
           state
@@ -118,7 +121,7 @@ const SearchHospital = () => {
         variant="contained"
         size="large"
         startIcon={<SearchIcon />}
-        sx={{ flexShrink: 0 }}
+        sx={{ py:"15px", flexShrink: 0 }}
         disableElevation
       >
         Search
