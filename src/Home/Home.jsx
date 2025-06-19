@@ -4,15 +4,14 @@ import NavBar from "../components/NavBar/NavBar";
 import HeroSlider from '../components/HeroSlider/HeroSlider'
 import SearchHospital from "../components/SearchHospital/SearchHospital";
 import HeroServices from '../components/IconLayout/HeroServices'
+import Offers from "../components/Sections/Offers/Offers";
 
 const Home = () => {
   return (
-    <Box>
+    <Box >
       <Box
         sx={{
           background: "linear-gradient(#E7F0FF, rgba(232, 241, 255, 0.47) 90%, #fff 10%)",
-          boxShadow: "none",
-          height:"100vh"
         }}
         mb={4}
       >
@@ -25,6 +24,7 @@ const Home = () => {
           </Stack>
         </Container>
       </Box>
+      <Offers/>
     </Box>
   );
 };
