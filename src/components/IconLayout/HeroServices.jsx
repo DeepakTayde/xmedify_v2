@@ -9,11 +9,11 @@ import IconCard from "../IconCard/IconCard";
 
 const HeroServices = () => {
   const services = [
-    { img: DoctorIcon, title: "Doctors" },
-    { img: DrugStoreIcon, title: "Labs" },
-    { img: HospitalIcon, title: "Hospitals", active: true },
-    { img: CapsuleIcon, title: "Medical Store" },
-    { img: AmbulanceIcon, title: "Ambulance" },
+    { icon: DoctorIcon, title: "Doctors" },
+    { icon: DrugStoreIcon, title: "Labs" },
+    { icon: HospitalIcon, title: "Hospitals", active: true },
+    { icon: CapsuleIcon, title: "Medical Store" },
+    { icon: AmbulanceIcon, title: "Ambulance" },
   ];
   return (
     <Box display="flex" flexDirection="column">
@@ -35,7 +35,7 @@ const HeroServices = () => {
         {services.map((service) => (
           <Grid item key={service.title} xs={4} md={2.5}>
             <IconCard
-              img={service.img}
+              icon={service.icon}
               title={service.title}
               active={service.active || false}
               bgColor="#FAFBFE"

@@ -5,6 +5,9 @@ import HeroSlider from '../components/HeroSlider/HeroSlider'
 import SearchHospital from "../components/SearchHospital/SearchHospital";
 import HeroServices from '../components/IconLayout/HeroServices'
 import Offers from "../components/Sections/Offers/Offers";
+import Specialization from "../components/Sections/Specialization/Specialization";
+import Specialist from "../components/Sections/Specialists/Specialist";
+import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
 
 const Home = () => {
   return (
@@ -25,6 +28,9 @@ const Home = () => {
         </Container>
       </Box>
       <Offers/>
+      <Specialization/>
+      <Specialist/>
+      <PatientCaring/>
     </Box>
   );
 };
