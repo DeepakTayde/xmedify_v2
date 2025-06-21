@@ -19,7 +19,7 @@ const HeroSlider = () => {
               <Button variant="contained" size="large" disableElevation >Find Centers</Button>
             </Link>
           </Box>
-          <Box component='img' src={HeroImg} alt="Medical Center Hero"  sx={{ width:{xs:1, md:'40%'}}}/>
+          <Box component='img' src={HeroImg} alt="Medical Center Hero"  sx={{width:'100%', maxWidth:500, display:'block', mx:'auto'}}/>
         </Stack>
       </SwiperSlide>
     </Swiper>
