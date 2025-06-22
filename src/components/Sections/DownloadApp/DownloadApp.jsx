@@ -23,10 +23,11 @@ const DownloadApp = () => {
       sx={{
         background:
           "linear-gradient(#E7F0FF, rgba(232, 241, 255, 0.47) 90%, #fff 10%)",
-        minHeight:'100vh',
+
         alignContent: "center",
         paddingTop: 5,
       }}
+      mb={0}
     >
       <Container>
         <Grid container spacing={6} alignItems="center">
@@ -68,8 +69,8 @@ const DownloadApp = () => {
               <Box component='img' src={Arrow} position='absolute' left={0} top={50} width={{xs:24, md:40}}/>
               <SmsForm/>
               <Stack direction={{sx:"column", md:"row"}} spacing={{sx:1, md:2}}>
-                <Button variant="contained" startIcon={<img src={PlayStoreLogo} height={24}/>}  disableElevation size="large" sx={{bgcolor:'#333', color:'#fff', py:1.5, borderRadius:1.5}}>Google Play</Button>
-                <Button variant="contained"  disableElevation size="large" startIcon={<img src={AppleStoreLogo} height={24}/>} sx={{bgcolor:'#333', color:'#fff', py:1.5, borderRadius:1.5}}>Apple Store</Button>
+                <Button variant="contained" startIcon={<img src={PlayStoreLogo} height={24} alt="play store"/>}  disableElevation size="large" sx={{bgcolor:'#333', color:'#fff', py:1.5, borderRadius:1.5}}>Google Play</Button>
+                <Button variant="contained"  disableElevation size="large" startIcon={<img src={AppleStoreLogo} alt="apple store" height={24}/>} sx={{bgcolor:'#333', color:'#fff', py:1.5, borderRadius:1.5}}>Apple Store</Button>
               </Stack>
               
             </Box>
