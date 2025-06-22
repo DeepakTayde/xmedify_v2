@@ -8,6 +8,9 @@ import Offers from "../components/Sections/Offers/Offers";
 import Specialization from "../components/Sections/Specialization/Specialization";
 import Specialist from "../components/Sections/Specialists/Specialist";
 import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
+import Blogs from "../components/Sections/Blogs/Blogs";
+import OurFamilies from "../components/Sections/OurFamilies/OurFamilies";
+import FAQs from "../components/Sections/FAQs/FAQs";
 
 const Home = () => {
   return (
@@ -31,6 +34,9 @@ const Home = () => {
       <Specialization/>
       <Specialist/>
       <PatientCaring/>
+      <Blogs/>
+      <OurFamilies/>
+      <FAQs/>
     </Box>
   );
 };

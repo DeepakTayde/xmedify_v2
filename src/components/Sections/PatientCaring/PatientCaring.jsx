@@ -20,12 +20,10 @@ const PatientCaring = () => {
         background:
           "linear-gradient(#E7F0FF, rgba(232, 241, 255, 0.47) 90%, #fff 10%)",
           minHeight: "100vh",
-
+          alignContent:'center'
       }}
-
-      
     >
-      <Container maxWidth='xl'>
+      <Container >
         <Grid container spacing={6} alignItems='center'>
           <Grid item xs={12} md={6}>
             <Box
@@ -67,7 +65,7 @@ const PatientCaring = () => {
                 fontWeight: 500,
                 fontSize: "17px",
                 lineHeight: "29px",
-                maxWidth:700
+                maxWidth:600
               }}
             >
               Our goal is to deliver quality of care in a courteous, respectful,
