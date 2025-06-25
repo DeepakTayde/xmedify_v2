@@ -12,7 +12,7 @@ const HospitalCard = ({
   booking = false,
 }) => {
   const [showCalendar, setShowCalendar] = React.useState(false);
-  console.log("Fetched hospitals:", hospitalDetails);
+
 
   return (
     <Box
@@ -149,15 +149,18 @@ const HospitalCard = ({
               <Chip
                 variant={"outlined"}
                 color="primary"
-                borderRadius={1}
-                fontSize={14}
                 label={hospitalDetails.bookingTime}
-              />
+                sx={{ fontSize: '14px', fontWeight: 400, borderRadius: '3px' }}
+                />
               <Chip
                 variant={"outlined"}
-                color="success"
-                borderRadius={1}
-                fontSize={14}
+                sx={{
+                  color: "#007100",
+                  fontSize: '14px',
+                  fontWeight: 700,
+                  borderColor: "#007100",
+                  borderRadius: '3px',
+                }}
                 label={format(
                   new Date(hospitalDetails.bookingDate),
                   "dd MMMM yyyy"

@@ -8,6 +8,7 @@ import Tick from "../assets/tick.png";
 import CTA from "../assets/cta.jpg";
 import HospitalCard from "../components/HospitalCard/HospitalCard";
 import BookingModal from "../components/BookingModal/BookingModal";
+import AutoHideSnackbar from "../components/AutoHideSnackbar/AutoHideSnackbar";
 
 const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -188,6 +189,12 @@ const Search = () => {
           bookingDetails={bookingDetails}
           showSuccessMessage={setShowBookingSuccess}
         />
+              <AutoHideSnackbar
+                open={showBookingSuccess}
+                setOpen={setShowBookingSuccess}
+                message="Booking Successful!"
+              />
+
       </Box>
     </React.Fragment>
   );
