@@ -17,7 +17,7 @@ const NavBar = () => {
   ];
 
   return (
-    <header>
+    <header >
       <Box p={1} bgcolor="primary.main">
         <Typography fontSize={14} textAlign="center" color="#fff">
           The health and well-being of our patients and their health care team
