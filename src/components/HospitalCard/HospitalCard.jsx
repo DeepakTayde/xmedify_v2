@@ -39,7 +39,7 @@ const HospitalCard = ({
               fontWeight: 600,
               fontSize: 20,
               color: "#14BEF0",
-              textTransform: "capitalize",
+              
               lineHeight: 1,
               marginBottom: "14px",
             }}

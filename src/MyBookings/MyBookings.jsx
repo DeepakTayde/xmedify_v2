@@ -108,7 +108,7 @@ const MyBookings = () => {
               {filteredBookings.length === 0 && (
                 <Box textAlign="center" mt={5}>
                   <Typography
-                    component="h3"
+                    component="h2"
                     p={3}
                     borderRadius={2}
                     color="#fff"
