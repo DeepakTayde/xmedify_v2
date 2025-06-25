@@ -34,29 +34,19 @@ const HospitalCard = ({
           sx={{ flexShrink: 0, alignSelf: "start" }}
         />
         <Box flex={1} textAlign={{ xs: "center", md: "left" }}>
-          <Typography
-            component="h3"
-            lineHeight={1}
-            mb={1}
-            sx={{
-              color: "primary.main",
-              fontWeight: 600,
-              fontSize: { xs: 18, md: 20 },
-              textTransform: "capitalize",
-            }}
-          >
-            <h3
-              style={{
-                margin: 0,
-                fontWeight: 600,
-                fontSize: "inherit",
-                color: "inherit",
-                textTransform: "capitalize",
-              }}
-            >
-              {hospitalDetails["Hospital Name"]}
-            </h3>
-          </Typography>
+<h3
+  style={{
+    margin: 0,
+    fontWeight: 600,
+    fontSize: 20,
+    color: "#14BEF0", 
+    textTransform: "capitalize",
+    lineHeight: 1,
+    marginBottom: '8px',
+  }}
+>
+  {hospitalDetails["Hospital Name"]}
+</h3>
           <Typography
             fontSize={14}
             fontWeight={700}
