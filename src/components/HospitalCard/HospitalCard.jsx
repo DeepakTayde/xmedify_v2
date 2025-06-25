@@ -45,7 +45,17 @@ const HospitalCard = ({
               textTransform: "capitalize",
             }}
           >
-            {hospitalDetails["Hospital Name"].toLowerCase()}
+            <h3
+              style={{
+                margin: 0,
+                fontWeight: 600,
+                fontSize: "inherit",
+                color: "inherit",
+                textTransform: "capitalize",
+              }}
+            >
+              {hospitalDetails["Hospital Name"]}
+            </h3>
           </Typography>
           <Typography
             fontSize={14}

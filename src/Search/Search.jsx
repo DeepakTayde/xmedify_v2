@@ -94,18 +94,14 @@ const Search = () => {
         <Container maxWidth="xl" sx={{ pt: 8, pb: 10, px: { xs: 0, md: 4 } }}>
           {hospitals.length > 0 && (
             <Box textAlign="left" mb={2}>
-              <Typography
-                component="h1"
-                fontSize={24}
-                mb={2}
-                fontWeight={500}
-                lineHeight={1.1}
+              <h1
+                style={{ fontSize: 24, marginBottom: 16, fontWeight: 500, lineHeight: 1.1 }}
               >
                 {`${hospitals.length} medical centers available in`}{" "}
                 <span style={{ textTransform: "capitalize" }}>
                   {city.toLowerCase()}
                 </span>
-              </Typography>
+              </h1>
               <Stack spacing={2} direction="row">
                 <Box
                   component="img"

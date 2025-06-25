@@ -59,17 +59,19 @@ const BookingModal = ({
   return (
     <Modal open={open} onClose={() => setOpen(false)}>
       <Box
-        width={{ xs: "90%", sm: "90%", md: "95%" }}
-        maxWidth={{ xs: "400px", sm: "500px", md: "600px" }}
-        bgcolor="#fff"
-        borderRadius={2}
-        boxShadow={24}
-        p={{ xs: 3, md: 4 }}
-        position={"absolute"}
-        top="50%"
-        left="50%"
-        transform="translate(-50%, -50%)"
-        outline="none"
+        sx={{
+          width: { xs: "90%", sm: "90%", md: "95%" },
+          maxWidth: { xs: "400px", sm: "500px", md: "600px" },
+          bgcolor: "#fff",
+          borderRadius: 2,
+          boxShadow: 24,
+          p: { xs: 3, md: 4 },
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)", // <-- use sx here!
+          outline: "none",
+        }}
       >
         <Typography variant="h3" component="h3">
           Confirm Booking

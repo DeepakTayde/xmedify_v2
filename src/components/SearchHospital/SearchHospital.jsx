@@ -71,7 +71,8 @@ const SearchHospital = () => {
         alignItems:"flex-end"
       }}
     >
-      <Select
+      <div id="state" style={{ width: "100%" }}>
+              <Select
         displayEmpty
         name="state"
         id="state"
@@ -95,7 +96,9 @@ const SearchHospital = () => {
           </MenuItem>
         ))}
       </Select>
-      <Select
+      </div>
+        <div id="city" style={{ width: "100%" }}>
+                <Select
         displayEmpty
         name="city"
         id="city"
@@ -118,9 +121,11 @@ const SearchHospital = () => {
           </MenuItem>
         ))}
       </Select>
+        </div>
       <Button
         type="submit"
         variant="contained"
+        id="searchBtn"
         size="large"
         startIcon={<SearchIcon />}
         sx={{ py:"15px", flexShrink: 0 }}
