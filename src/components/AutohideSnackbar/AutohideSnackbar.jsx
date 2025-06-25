@@ -1,7 +1,7 @@
-import { Alert, Snackbar } from '@mui/material'
+import { Alert, Snackbar } from '@mui/material';
 import React from 'react'
 
-const AutoHideSnackbar = ({open, setOpen, message}) => {
+const AutohideSnackbar = ({open, setOpen, message}) => {
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;
@@ -21,4 +21,4 @@ const AutoHideSnackbar = ({open, setOpen, message}) => {
   )
 }
 
-export default AutoHideSnackbar
+export default AutohideSnackbar

@@ -8,7 +8,7 @@ import Tick from "../assets/tick.png";
 import CTA from "../assets/cta.jpg";
 import HospitalCard from "../components/HospitalCard/HospitalCard";
 import BookingModal from "../components/BookingModal/BookingModal";
-import AutoHideSnackbar from "../components/AutoHideSnackbar/AutoHideSnackbar";
+import AutohideSnackbar from "../components/AutohideSnackbar/AutohideSnackbar";
 
 const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -63,10 +63,9 @@ const Search = () => {
       <NavBar />
       <Box
         sx={{
-          background:
-            "linear-gradient(#EFF5FE, rgba(241, 247, 255, 0.47) )",
-          
-            pl:0
+          background: "linear-gradient(#EFF5FE, rgba(241, 247, 255, 0.47) )",
+
+          pl: 0,
         }}
         width="100%"
       >
@@ -96,7 +95,12 @@ const Search = () => {
           {hospitals.length > 0 && (
             <Box textAlign="left" mb={2}>
               <h1
-                style={{ fontSize: 24, marginBottom: 16, fontWeight: 500, lineHeight: 1.1 }}
+                style={{
+                  fontSize: 24,
+                  marginBottom: 16,
+                  fontWeight: 500,
+                  lineHeight: 1.1,
+                }}
               >
                 {`${hospitals.length} medical centers available in`}{" "}
                 <span style={{ textTransform: "capitalize" }}>
@@ -128,7 +132,7 @@ const Search = () => {
               sx={{
                 width: { xs: "100%", md: "calc(100% - 360px)" },
                 mb: { xs: 4, md: 0 },
-                mr: { xs: 0, md: '24px' },
+                mr: { xs: 0, md: "24px" },
               }}
               spacing={3}
             >
@@ -173,7 +177,7 @@ const Search = () => {
               component={"img"}
               src={CTA}
               alt="cta-banner"
-              width={{xs: "100%", md: "360px"}}
+              width={{ xs: "100%", md: "360px" }}
               height="auto"
               sx={{
                 display: "block",
@@ -189,12 +193,11 @@ const Search = () => {
           bookingDetails={bookingDetails}
           showSuccessMessage={setShowBookingSuccess}
         />
-              <AutoHideSnackbar
-                open={showBookingSuccess}
-                setOpen={setShowBookingSuccess}
-                message="Booking Successful!"
-              />
-
+        <AutohideSnackbar
+          open={showBookingSuccess}
+          setOpen={setShowBookingSuccess}
+          message="Booking Successful!"
+        />
       </Box>
     </React.Fragment>
   );

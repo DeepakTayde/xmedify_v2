@@ -13,7 +13,6 @@ const HospitalCard = ({
 }) => {
   const [showCalendar, setShowCalendar] = React.useState(false);
 
-
   return (
     <Box
       sx={{ bgcolor: "#fff", p: { xs: 2, md: 4 } }}
@@ -34,19 +33,19 @@ const HospitalCard = ({
           sx={{ flexShrink: 0, alignSelf: "start" }}
         />
         <Box flex={1} textAlign={{ xs: "center", md: "left" }}>
-<h3
-  style={{
-    margin: 0,
-    fontWeight: 600,
-    fontSize: 20,
-    color: "#14BEF0", 
-    textTransform: "capitalize",
-    lineHeight: 1,
-    marginBottom: '8px',
-  }}
->
-  {hospitalDetails["Hospital Name"]}
-</h3>
+          <h3
+            style={{
+              margin: 0,
+              fontWeight: 600,
+              fontSize: 20,
+              color: "#14BEF0",
+              textTransform: "capitalize",
+              lineHeight: 1,
+              marginBottom: "14px",
+            }}
+          >
+            {hospitalDetails["Hospital Name"]}
+          </h3>
           <Typography
             fontSize={14}
             fontWeight={700}
@@ -140,16 +139,16 @@ const HospitalCard = ({
                 variant={"outlined"}
                 color="primary"
                 label={hospitalDetails.bookingTime}
-                sx={{ fontSize: '14px', fontWeight: 400, borderRadius: '3px' }}
-                />
+                sx={{ fontSize: "14px", fontWeight: 400, borderRadius: "3px" }}
+              />
               <Chip
                 variant={"outlined"}
                 sx={{
                   color: "#007100",
-                  fontSize: '14px',
+                  fontSize: "14px",
                   fontWeight: 700,
                   borderColor: "#007100",
-                  borderRadius: '3px',
+                  borderRadius: "3px",
                 }}
                 label={format(
                   new Date(hospitalDetails.bookingDate),
