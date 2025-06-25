@@ -2,13 +2,13 @@ import { Box, Button, InputAdornment, MenuItem, Select } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 const SearchHospital = () => {
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
   const [formData, setFormData] = useState({ state: "", city: "" });
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getStates = async () => {
@@ -29,8 +29,8 @@ const SearchHospital = () => {
 
   useEffect(() => {
     const getCities = async () => {
-        setCities([]);
-        setFormData((prev)=> ({...prev, city:""}))
+      setCities([]);
+      setFormData((prev) => ({ ...prev, city: "" }));
       try {
         const response = await axios.get(
           `https://meddata-backend.onrender.com/cities/${formData.state}`
@@ -44,19 +44,17 @@ const SearchHospital = () => {
     formData.state !== "" && getCities();
   }, [formData.state]);
 
-
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit =(e)=>{
-    e.preventDefault()
-    if(formData.state && formData.city){
-        navigate(`/search?state=${formData.state}&city=${formData.city}`);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (formData.state && formData.city) {
+      navigate(`/search?state=${formData.state}&city=${formData.city}`);
     }
-  }
+  };
 
   return (
     <Box
@@ -67,68 +65,69 @@ const SearchHospital = () => {
         gap: 4,
         justifyContent: "center",
         flexDirection: { xs: "column", md: "row" },
-        textAlign:"start",
-        alignItems:"flex-end"
+        textAlign: "start",
+        alignItems: "flex-end",
       }}
     >
       <div id="state" style={{ width: "100%" }}>
-              <Select
-        displayEmpty
-        name="state"
-        id="state"
-        value={formData.state}
-        onChange={handleChange}
-        startAdornment={
-          <InputAdornment position="start">
-            <SearchIcon />
-          </InputAdornment>
-        }
-        required
-        sx={{ width: "100%", minWidth: "200px"  }}
-
-      >
-        <MenuItem  value="" disabled sx={{justifyContent:'flex-start'}}>
-          state
-        </MenuItem>
-        {states.map((state) => (
-          <MenuItem key={state} value={state}>
-            {state}
+        <Select
+          displayEmpty
+          name="state"
+          value={formData.state}
+          onChange={handleChange}
+          startAdornment={
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          }
+          required
+          sx={{ width: "100%", minWidth: "200px" }}
+        >
+          <MenuItem value="" disabled sx={{ justifyContent: "flex-start" }}>
+            state
           </MenuItem>
-        ))}
-      </Select>
+          {states.map((state) => (
+            <MenuItem key={state} value={state}>
+              {state}
+            </MenuItem>
+          ))}
+        </Select>
       </div>
-        <div id="city" style={{ width: "100%" }}>
-                <Select
-        displayEmpty
-        name="city"
-        id="city"
-        value={formData.city}
-        onChange={handleChange}
-        startAdornment={
-          <InputAdornment position="start">
-            <SearchIcon />
-          </InputAdornment>
-        }
-        required
-        sx={{ width: "100%", minWidth: 200 }}
-      >
-        <MenuItem value="" disabled sx={{justifyContent:'flex-start'}}>
-          city
-        </MenuItem>
-        {cities.map((city) => (
-          <MenuItem key={city} value={city} sx={{justifyContent:'flex-start'}}>
-            {city}
+      <div id="city" style={{ width: "100%" }}>
+        <Select
+          displayEmpty
+          name="city"
+          value={formData.city}
+          onChange={handleChange}
+          startAdornment={
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          }
+          required
+          sx={{ width: "100%", minWidth: 200 }}
+        >
+          <MenuItem value="" disabled sx={{ justifyContent: "flex-start" }}>
+            city
           </MenuItem>
-        ))}
-      </Select>
-        </div>
+          {cities.map((city) => (
+            <MenuItem
+              key={city}
+              value={city}
+              sx={{ justifyContent: "flex-start" }}
+            >
+              {city}
+            </MenuItem>
+          ))}
+        </Select>
+      </div>
       <Button
         type="submit"
         variant="contained"
         id="searchBtn"
         size="large"
         startIcon={<SearchIcon />}
-        sx={{ py:"15px", flexShrink: 0 }}
+        sx={{ py: "15px", flexShrink: 0 }}
         disableElevation
       >
         Search
