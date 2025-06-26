@@ -127,7 +127,7 @@ const SearchHospital = () => {
         id="searchBtn"
         size="large"
         startIcon={<SearchIcon />}
-        sx={{ py: "15px", flexShrink: 0 }}
+        sx={{ py: "15px", flexShrink: 0, width:{xs:'100%', md:'auto'} }}
         disableElevation
       >
         Search

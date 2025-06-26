@@ -20,7 +20,7 @@ const MyBookings = () => {
     setFilteredBookings(bookings);
   }, [bookings]);
 
-  console.log("Bookings:", bookings);
+
 
   return (
     <React.Fragment>
@@ -57,7 +57,7 @@ const MyBookings = () => {
               <Typography
                 component="h1"
                 pb={1}
-                fontSize={{ xs: 32, md: 40 }}
+                fontSize={{ xs: 36, md: 40 }}
                 fontWeight={700}
                 color="#fff"
               >
@@ -84,9 +84,11 @@ const MyBookings = () => {
         </Box>
         <Container maxWidth="xl" sx={{ pt: 8, pb: 10, px: { xs: 0, md: 4 } }}>
           <Stack
-            alignItems={"flex-start"}
+            alignItems={{ xs: "center", md: "flex-start" }}
             direction={{ xs: "column", md: "row" }}
             spacing={2}
+            justifyContent="space-between"
+
           >
             <Stack
               sx={{
@@ -124,7 +126,6 @@ const MyBookings = () => {
               src={CTA}
               alt="cta-banner"
               width={{ xs: "100%", md: "360px" }}
-              height="auto"
               sx={{
                 display: "block",
                 margin: "0 auto",

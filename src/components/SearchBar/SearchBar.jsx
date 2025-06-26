@@ -42,12 +42,8 @@ const SearchBar = ({ bookingList, filterList }) => {
                     color: "#ABB6C7",
                     fontSize: "14px",
                     fontWeight: 400,
-
-
-                    
                 },
             }}
-            // inputProps={{maxLength: 110}}
         />
 
         <Button
